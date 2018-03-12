@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Dom Manipulation</title>
+</head>
+<body>
+	<div id="idname"></div>
+	<h1 class="classname"></h1>
+	<h1 class="classname"></h1>
+	<h1 class="classname"></h1>
+
+	<div id="content-parent">
+		<div id="content-id-1">
+			<p class="content-class-1">Test</p>
+			<p class="content-class-1">Test</p>
+			<p class="content-class-1">Test</p>
+		</div>
+		<div id="content-id">
+			<p class="content-class">Test</p>
+			<p class="content-class">Test</p>
+			<p class="content-class" id="last-child">Last Child</p>
+		</div>
+		<div id="content-id-2">
+			<p class="content-class-2">Test</p>
+			<p class="content-class-2">Test</p>
+			<p class="content-class-2">Test</p>
+		</div>
+
+		<div id="change-html">
+			<h1>Test</h1>
+			<p id="change-text">This is the text I want to change</p>
+			<p id="random-p"></p>
+		</div>
+
+		<div id="loopie" style="width:200px;height:200px;background-color:red;">
+			This is the outer Div
+			<div id="mame" style="width:100px;height:100px;background-color:yellow;">This is the inner element
+				<p id="mametwo" style="width:50px;height:50px;background-color:orange;">This is the inner inner element </p>
+			<div>
+		</div>
+
+		<input id="input-test" value="sdsdsd" placeholder="Enter a input">
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
