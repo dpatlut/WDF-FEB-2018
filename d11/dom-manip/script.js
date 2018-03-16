@@ -28,7 +28,6 @@ elemParent = elem.parentNode,
 elemSiblingNode = elem.nextSibling,
 elemSiblingElem = elem.nextElementSibling
 
-
 //note the distinction between these two calls.
 console.log(elemChildren); //gets children elements
 console.log(elemChildrenNodes); //gets all children nodes
