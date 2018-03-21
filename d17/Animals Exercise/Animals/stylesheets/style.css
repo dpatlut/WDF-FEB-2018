@@ -1,0 +1,101 @@
+body{
+  margin: 0;
+  background-image: url('../img/clouds.jpg');
+  background-size: contain;
+}
+
+
+nav{
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  background-color: #c8feff;
+}
+
+
+.container{
+  width: 800px;
+  margin: 50px auto;
+  background-color: #fdf658;
+}
+
+#pic-strip{
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: blanchedalmond;
+}
+
+#sloth{
+  font-size: 30px;
+  margin: 0;
+}
+
+
+img{
+  width: 650px;
+  border: 4px solid white;
+  -webkit-box-shadow: 0px 2px 5px 4px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 2px 5px 4px rgba(0,0,0,0.15);
+  box-shadow: 0px 2px 5px 4px rgba(0,0,0,0.15);
+}
+
+
+.surprise{
+  width: 500px;
+  height: 500px;
+  background-image: url('../img/kitten.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-left: -250px;
+  text-align:center;
+  z-index: 1000;
+}
+
+button{
+  border: solid 2px yellow;
+  border-radius: 3px;
+  background-color: lightskyblue;
+  width: 150px;
+  height: 50px;
+  color: yellow;
+}
+
+.subhead{
+  font-family: Lobster;
+  border-top: 5px double;
+  border-bottom: 5px double;
+}
+
+#logo{
+  background-image: url('../img/logos/kitty.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 50px;
+  left: 0px;
+  width: 50px;
+}
+
+#sloth-container{
+  text-align: right;
+  padding-right: 20px;
+}
+
+.cute-container{
+  width: 650px;
+  height: 100px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.cute{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url('../img/beagle.png');
+  background-size: cover;
+}
+

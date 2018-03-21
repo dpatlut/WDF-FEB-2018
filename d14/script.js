@@ -108,8 +108,25 @@ Wizard.prototype.setAge = function(age){
 
 
 
+function Dog(breed){
+	this.breed = breed;
+	this.setBreed = function(breed){
+		this.breed = breed;
+	}
+}
 
+Dog
+Dog.prototype
 
+vs 
+
+function Dog(breed){
+	this.breed = breed;
+}
+
+Dog.prototype.setBreed = function(breed){
+	this.breed = breed;
+}
 
 
 
