@@ -1,0 +1,153 @@
+// Nesting
+//The Inception Rule: don’t go more than four levels deep. http://thesassway.com/beginner/the-inception-rule 
+//https://css-tricks.com/forums/topic/sass-best-practices-nesting-more-than-3-levels-deep/ 
+//https://css-tricks.com/the-sass-ampersand/ (Parent Selector)
+//http://thesassway.com/intermediate/referencing-parent-selectors-using-ampersand 
+
+
+body{
+    .post{
+        .title{
+            .blah{
+                .blah-blah{
+
+                }
+            }
+        }
+        .alt-title{
+            &:hover{
+                background-color:blue;
+                color:yellow;
+            }
+        }
+    }
+}
+//& can be sometimes useful when you have deep nesting and need to reference a parent element.
+
+//-----------------------------
+//Variables http://thesassway.com/beginner/variable-naming
+//https://anotheruiguy.gitbooks.io/sassintherealworld_book-i/handy-tools/variable-scoping.html
+//
+
+// Bad
+$red: #fff;
+$yellow: yellow;
+
+// Good
+$brandColor: red;
+$accentColor: yellow;
+$myHeight: 24px;
+$myMargin: 2%;
+
+//now we can use these variables inside of our styles just like any other style
+.main{
+    background-color:   $brandColor;
+    font-size:  $myHeight;
+    margin: 10px 10px 10px $myMargin;
+}
+
+//-----------------------------
+//Mixins - Pieces of code that we can use over and over.
+//Very similar to javascript concepts
+//https://scotch.io/tutorials/how-to-use-sass-mixins
+
+
+@mixin flex {
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+.box{ @include flex;}
+
+
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+  }
+  
+.box { 
+    @include border-radius(10px); 
+}
+
+
+
+//with params & conditionals
+@mixin grid($flex) {
+    @if $flex {
+        @include flex;
+    } @else {
+        display: block;
+    }
+}
+
+
+
+
+
+//multiple params
+@mixin grid($flex, $full-width) {
+    // code goes in here
+}
+
+
+
+
+
+
+
+
+//Default Params
+//We can pass as many variables as we want. But, any variable that has a default/optional argument needs to be at the end of the argument list.
+//BAD - GIVES ERROR
+// @mixin grid($flex: true, $max-width) {
+//     // code here
+// }
+//GOOD
+@mixin grid($max-width,$flex: true) {
+    // code here
+}
+
+@mixin add-border(
+    $border-position: all,
+    $border-size: 1px,
+    $border-pattern: solid,
+    $border-color: $black) {
+
+  @if $border-position == $border-position-all {
+    border: $border-size $border-pattern $border-color;
+  }
+  @else {
+    border-#{$border-position}: $border-size
+    $border-pattern $border-color;
+  }
+}
+
+
+
+.box { @include border-radius(10px); }
+
+//Programming concepts in CSS MIXINS
+//http://sass-lang.com/documentation/file.SASS_REFERENCE.html#control_directives__expressions 
+
+
+//-----------------------------
+//Partials
+//You can commonally find one main.scss file that just imports all the rest
+//http://thesassway.com/beginner/how-to-structure-a-sass-project
+@import "partials/colors";
+
+
+//---------------
+//Extends
+// @extends directive is a great tool for creating and managing repeated code. 
+// Unlike mixins, extends do not accept arguments and do not inject code where called. 
+// Instead, an extended selector will be modified in it's place of origin within the cascade by appending the extending selector.
+//take a look here : https://anotheruiguy.gitbooks.io/sassintherealworld_book-i/aLittleUnderTheHood/extended-selectors.html
+//A limitation of Sass extend is that it cannot extend a nested selector. 
+//https://css-tricks.com/the-extend-concept/
+
+

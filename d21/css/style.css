@@ -1,0 +1,26 @@
+body .post .alt-title:hover {
+  background-color: blue;
+  color: yellow; }
+
+.main {
+  background-color: red;
+  font-size: 24px;
+  margin: 10px 10px 10px 2%; }
+
+.box {
+  display: -webkit-flex;
+  display: flex; }
+
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+/*# sourceMappingURL=style.css.map */

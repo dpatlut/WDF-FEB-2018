@@ -1,0 +1,26 @@
+@mixin box($height, $width, $background-color){
+    border:1px solid black;
+    height: $height;
+    width: $width;
+    background-color: $background-color;
+}
+
+@mixin smallphone{
+    @media (max-width: 450px){
+        background-color:orange;
+    }
+}
+
+@mixin top-lefty($top,$left){
+    position:absolute;
+    left: $left;
+    top: $top;
+}
+
+$colors: darkslateblue seagreen steelblue;
+@each $color in $colors {
+    %#{$color}-background {
+        background-color: #{$color};
+        height: 20%;
+    }
+}

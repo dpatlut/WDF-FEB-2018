@@ -1,0 +1,67 @@
+
+@import '../partials/colors';
+@import '../partials/navmenu';
+@import '../partials/mixins';
+
+$num: 2;
+
+body{
+
+    p{
+        @if ($num == 2){
+            font-size:2em;
+        } @else if($num == 1) {
+            font-size:5px;
+        } @else{
+            font-size:10px;
+        }
+    }
+
+    #main-container{
+        width:100%;
+        background-color: $main-container-color;
+
+          #top-section{
+            @extend %dev-section;
+            background-color: $top-section-color;
+          }
+          
+          #middle-section{
+            @extend %dev-section;
+            @extend %seagreen-background;
+            background-color: $middle-section-color;
+
+            .box-red{
+                @include box(100px,100px,red);
+                @include smallphone;
+            }
+          }
+          
+          #lower-section{
+            @extend %dev-section;
+            background-color:$bottom-section-color;
+          }
+    
+     }
+
+      
+     #main-footer{
+        @extend %extend-class;
+        width:100%;
+        height:100px;
+        background-color:$main-footer-color;
+    }
+  
+ 
+  
+}
+
+%dev-section{
+    width:70%;
+    margin:auto;
+    height:200px;
+  }
+
+ %extend-class{
+    border: 5px solid black;
+  }
