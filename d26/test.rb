@@ -89,6 +89,8 @@ people = [["Jason", "Maria", "Justin"], ["Red", "Blue", "Green"], ["Limp Bizkit"
 
 #The sentence will look like "Jason's favorite color is Red, and he loves Limp Bizkit"
 
+
+#Be careful here! If there was a 4th person in the arrays this would not work. You should not base it on people.length.
 i = 0
 until i == people.length do
 	puts ("#{people[0][i]}'s favorite color is #{people[1][i]} and they love #{people[2][i]}")
