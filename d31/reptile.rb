@@ -22,5 +22,5 @@ end
 
 x = Reptile.new('turtle',5,true)
 
-x.species = "snakes"
+x.species = r"snakes"
 binding.pry

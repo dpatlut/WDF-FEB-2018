@@ -1,0 +1,46 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    adorable_cat (0.0.5)
+      json
+      nokogiri
+      rest-client
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    json (2.1.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_portile2 (2.3.0)
+    mustermann (1.0.2)
+    netrc (0.11.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
+    rack (2.0.4)
+    rack-protection (2.0.1)
+      rack
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
+    sinatra (2.0.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.1)
+      tilt (~> 2.0)
+    tilt (2.0.8)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  adorable_cat
+  sinatra
+
+BUNDLED WITH
+   1.15.3
