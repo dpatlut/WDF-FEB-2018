@@ -1,7 +1,6 @@
 
-require_relative './reptile.rb'
 
-class Turtle < Reptile
+class Turtle
     @@class_variable = 10
     
     attr_accessor :name, :age
@@ -9,7 +8,6 @@ class Turtle < Reptile
     def initialize(name,age)
         @name = name
         @age = age
-        super("Turtle", 4)
     end
 
     def age!
@@ -31,4 +29,4 @@ end
 # puts bud.age!
 # puts bud.age
 # puts bud.name
-# puts Turtle.funfact
+puts Turtle.funfact
