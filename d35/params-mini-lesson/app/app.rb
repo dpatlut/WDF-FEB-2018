@@ -1,6 +1,7 @@
 require 'sinatra'
 
 get '/' do
+    puts ENV['WING_IT_GOOGLE']
     erb :index
 end
 
