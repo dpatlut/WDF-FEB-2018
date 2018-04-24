@@ -18,6 +18,7 @@ get '/robots/:id' do
     erb :show
 end
 
+
 #Render form for creating a new robot (C)
 get '/robots/new/create' do
     erb :new
@@ -44,12 +45,13 @@ end
 
 
 #Edit robot from /id/edit route (U)
-patch '/robots/:id' do
+put '/robots/:id' do
     @specific_robot = Robot.find(params[:id])
-
+    @specific_robot.update(name: params[:name], angry: params[:angry], power: params[:power])
 end
   
 #Delete Robot (D)
 delete '/robots/:id' do
     Robot.destroy(params[:id])
+    redirect '/robots'
 end

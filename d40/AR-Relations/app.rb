@@ -34,3 +34,34 @@ get '/course/:id' do
     @alltas = mycourse.tas
     erb :class
 end
+
+get '/students' do 
+    @students = Student.all
+    erb :student
+end
+
+
+get '/student/new' do
+    erb :new
+end
+
+post '/students/new' do
+    Student.create(name: params[:name], age: params[:age])
+    redirect '/students'
+end
+
+get '/student/:id/edit' do
+    @current_student = Student.find(params[:id])
+    erb :edit
+end
+
+put '/student/:id' do 
+    @current_student = Student.find(params[:id])
+    @current_student.update(name: params[:name], age: params[:age])
+    redirect '/students'
+end
+
+delete '/student/:id' do 
+    Student.destroy(params[:id])
+    redirect '/students'
+end
