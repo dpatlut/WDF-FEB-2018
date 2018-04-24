@@ -1,0 +1,8 @@
+<h1> <%= @owner.name %> </h1>
+<p>email: <%= @owner.email %> </p>
+<p>dogs:</p>
+<ul>
+  <% @owneddogs.each do |x| %>
+  <li><%= x.name %></li>
+  <% end %>
+</ul>

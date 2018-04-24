@@ -1,0 +1,6 @@
+Robot.create(name:'terminator', angry: true, power: 100)
+Robot.create(name:'terminator', angry: true, power: 100)
+Robot.create(name:'terminatorsdsdsd', angry: true, power: 100)
+Robot.create(name:'terminatorsdsdsdsdsd', angry: true, power: 100)
+Robot.create(name:'terminator23123', angry: false, power: 100)
+Robot.create(name:'terminator12323', angry: false, power: 100)

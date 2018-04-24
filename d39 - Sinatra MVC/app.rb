@@ -7,6 +7,7 @@ set :database, {adapter: 'postgresql', database: 'catsowners'}
 
 
 get '/' do 
-    @cats = Cat.all()
+    @cats = Owner.find(1).cats
+    puts 'blah'
     erb :index
 end
