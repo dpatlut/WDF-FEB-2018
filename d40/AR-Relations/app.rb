@@ -1,7 +1,11 @@
 require "sinatra"
 require "sinatra/activerecord"
+
 #Dont forget to require your models
-# require_relative './models/'
+require_relative './models/class'
+require_relative './models/ta'
+require_relative './models/instructor'
+require_relative './models/student'
 
 
 #The goal of the app is setup the following relationships for our classroom managment app.
@@ -15,11 +19,12 @@ require "sinatra/activerecord"
 
 set :database, {adapter: 'postgresql', database: 'relations'}
 
-get '/' do 
 
-end
-
-#here we want to pull all students currently in a specific class
+#We want to display the following :
+#All students part of a specific class
+#All instructors part of a class
+#All tas part of a class
 get '/class/:id' do
-
+    #Do something here
+    erb :class
 end

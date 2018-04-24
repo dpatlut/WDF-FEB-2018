@@ -36,8 +36,15 @@ get '/robots/:id/edit'
     erb :edit
 end
 
+#Resources
+# Why we cant use PUT/PATCH/DELETE in forms https://stackoverflow.com/questions/16805956/why-dont-browsers-support-put-and-delete-requests-and-when-will-they
+# PUT vs PATCH https://medium.com/backticks-tildes/restful-api-design-put-vs-patch-4a061aa3ed0b
+# PUT -> Replace whole record
+# PATCH -> Update parts of the record
+
+
 #Edit robot from /id/edit route (U)
-put '/robots/:id' do
+patch '/robots/:id' do
     @specific_robot = Robot.find(params[:id])
 
 end
