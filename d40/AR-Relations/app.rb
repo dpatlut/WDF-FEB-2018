@@ -6,6 +6,8 @@ require_relative './models/course'
 require_relative './models/ta'
 require_relative './models/instructor'
 require_relative './models/student'
+require_relative './models/courseStudent'
+
 
 
 #The goal of the app is setup the following relationships for our classroom managment app.
@@ -25,6 +27,10 @@ set :database, {adapter: 'postgresql', database: 'relations'}
 #All instructors part of a course
 #All tas part of a course
 get '/course/:id' do
-    #Do something here
+    currentcourse = params[:id]
+    mycourse = Course.find(currentcourse)
+    @allcoursestudents = mycourse.students
+    @allinstructors = mycourse.instructor
+    @alltas = mycourse.tas
     erb :class
 end

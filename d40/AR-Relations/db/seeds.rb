@@ -1,0 +1,5 @@
+Student.create(name: "Ronen", age: 99)
+Instructor.create(name:"David", age: 57, years_experiance: 500)
+Course.create(name: "WDF", location: "NYC", instructor_id: 1)
+Ta.create(name: "john", level: "senior", course_id: 1)
+CourseStudent.create(student_id: 1, course_id: 1)

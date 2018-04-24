@@ -25,9 +25,7 @@ end
 
 #Create new robot from /new route (C)
 post '/robots/new' do
-    puts params
-    # Robot.create(params)
-    # @new_robot = Robot.create(params[:article])
+    Robot.create(name: params[:name], angry: params[:angry], power: params[:power])
     redirect '/robots'
 end
   
