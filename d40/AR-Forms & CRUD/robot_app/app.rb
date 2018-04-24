@@ -19,19 +19,21 @@ get '/robots/:id' do
 end
 
 #Render form for creating a new robot (C)
-get '/robots/new'
+get '/robots/new/create' do
     erb :new
 end
 
 #Create new robot from /new route (C)
 post '/robots/new' do
-    @new_robot = Robot.create(params[:article])
+    puts params
+    # Robot.create(params)
+    # @new_robot = Robot.create(params[:article])
     redirect '/robots'
 end
   
 
 #Render form for editing a new robot (U)
-get '/robots/:id/edit'
+get '/robots/:id/edit' do 
     @specific_robot = Robot.find(params[:id])
     erb :edit
 end
