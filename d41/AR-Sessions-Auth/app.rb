@@ -22,7 +22,7 @@ get '/profile' do
     erb :profile
 end
 
-get '/someotherplace'
+get '/someotherplace' do
     @user = User.find(session[:id])
     erb :randomplace
 end
@@ -34,16 +34,19 @@ get '/logout' do
     redirect '/login'
 end
 
-post 'user/login' do 
-    user = User.where(email: params[:email], password: params[:password])
-    if user != nil
-        session[:id] = user.id
+post '/user/login' do 
+    @user = User.find_by(email: params[:email], password: params[:password])
+    if @user != nil
+        session[:id] = @user.id
         erb :profile
     else   
         #Could not find this user. Redirecting them to the signup page
         redirect '/signup'
     end 
 end
+
+
+
 
 post '/user/new' do 
     #Creating a new user based on the values from the form
@@ -53,6 +56,11 @@ post '/user/new' do
     session[:id] = @newuser.id
     redirect '/profile'
 end
+
+
+
+
+
 
 private 
 #Potentially useful function instead of checking if the user exists
