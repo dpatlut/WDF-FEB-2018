@@ -1,0 +1,18 @@
+<form action="/attendees/<%= @specific_attendee.id %>" method="post">
+  <input type="hidden" name="_method" value="PUT">
+  <input type="text" name="first_name" value="<%= @specific_attendee.first_name %>">
+  <input type="text" name="last_name" value="<%= @specific_attendee.last_name %>">
+  <input type="text" name="age" value="<%= @specific_attendee.age %>">
+  <input type="text" name="likes_beer" value="<%= @specific_attendee.likes_beer %>">
+  <button type="submit" style="width:100px;height:100px">
+</form>
+
+
+
+
+
+
+<form action="/attendees/<%= @specific_attendee.id %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <button type="submit" style="width:100px;height:100px">
+</form>
