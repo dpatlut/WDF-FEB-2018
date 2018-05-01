@@ -3,7 +3,7 @@ require 'sinatra/activerecord'
 require_relative './models/Dog'
 require_relative './models/Owner'
 
-set :database, {adapter: 'postgresql', database: 'doggydaycare'}
+# set :database, {adapter: 'postgresql', database: 'doggydaycare'}
 
 get '/' do
   erb :index

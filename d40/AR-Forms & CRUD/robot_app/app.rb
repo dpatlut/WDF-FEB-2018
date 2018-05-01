@@ -2,7 +2,6 @@ require "sinatra"
 require "sinatra/activerecord"
 require_relative './models/Robot'
 
-set :database, {adapter: 'postgresql', database: 'crudpractice'}
 
 #Basic CRUD Operations in Sinatra w/ AR
 

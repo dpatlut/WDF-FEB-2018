@@ -1,0 +1,2 @@
+module DoggytreatsHelper
+end
