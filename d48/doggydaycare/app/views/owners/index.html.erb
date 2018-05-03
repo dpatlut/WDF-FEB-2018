@@ -1,1 +1,7 @@
-<h1> Hello World </h1>
+<% @owners.each do |owner| %>
+    <div>
+        <h3><%= owner.name %></h3>
+        <h3><%= owner.age %></h3>
+        <h3><%= owner.phonenumber %></h3>
+    </div>
+<% end %>

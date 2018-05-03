@@ -1,0 +1,12 @@
+<%= form_for @owner do |f| %>  
+    <%= f.label :name %>  
+    <%= f.text_field :name, value: @owner.name%>  
+    <%= f.label :age %>  
+    <%= f.number_field :age, value: @owner.age%>
+    <%= f.label :phonenumber %>  
+    <%= f.text_field :phonenumber, value: @owner.phonenumber%>  
+    <%= f.submit %>
+<% end %>
+
+
+<%= link_to 'Delete', owner_path(@owner), method: :delete %> 

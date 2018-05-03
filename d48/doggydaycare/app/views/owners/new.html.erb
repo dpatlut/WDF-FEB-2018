@@ -1,0 +1,11 @@
+<%= form_for @owner do |f| %>  
+    <%= f.label :name %>  
+    <%= f.text_field :name %>  
+    <%= f.label :age %>  
+    <%= f.number_field :age %>
+    <%= f.label :phonenumber %>  
+    <%= f.text_field :phonenumber, class:"thisismyphonenumbertag", id: "blah" %> 
+    <%= f.submit %>
+<% end %>
+
+
