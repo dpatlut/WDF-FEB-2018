@@ -1,0 +1,11 @@
+console.log('Im hitting this file for the new action');
+
+var form = document.getElementById('task-form');
+form.innerHTML = "<%= j (render 'form') %>";
+form.style.display = "block";
+
+
+
+document.getElementById('ajaxcall').addEventListener('ajax:success', function(e){
+    console.log('Call exectued to render code');
+})

@@ -1,0 +1,7 @@
+console.log('I am hitting the js file for edit')
+
+let taskdiv = document.getElementById('task-<%= @task.id%>')
+console.log("Current task clicked " + taskdiv.innerText)
+
+//Gave up here and had to use JQuery to replace the TR element becuase trs dont like forms inside of them 
+$(taskdiv).replaceWith("<%= j (render 'form') %>");

@@ -13,7 +13,8 @@
  * require 'cat'
  * require 'custom/cat'
  * require_tree ../custom_css
- *= require_tree .
+
  */
+
 
 

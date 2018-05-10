@@ -2,7 +2,15 @@ class DoggytreatsController < ApplicationController
 
     #This is my /doggytreats route
     def showmytreat
-        puts 'I CAN SEE ALL MY TREATS'
+            begin
+              @user = User.find(1)
+            rescue ActiveRecord::RecordNotFound => e
+              print "THIS IS MY ERROR DOWN HERE"
+              print e
+            end
     end
+
+end
+
 
 end

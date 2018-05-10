@@ -1,0 +1,3 @@
+console.log('Im hitting this file for the create action')
+form.style.display = "none";
+document.getElementById('my-tasks').insertAdjacentHTML('beforeend', '<%= j render partial: "task", locals: {task: @task} %>');
