@@ -1,11 +1,13 @@
 console.log('Im hitting this file for the new action');
 
-var form = document.getElementById('task-form');
+//Selects hidden form element on index.html.erb
+let form = document.getElementById('task-form');
+
+//set the innerHTML to a string of html elements
 form.innerHTML = "<%= j (render 'form') %>";
+
 form.style.display = "block";
 
 
 
-document.getElementById('ajaxcall').addEventListener('ajax:success', function(e){
-    console.log('Call exectued to render code');
-})
+

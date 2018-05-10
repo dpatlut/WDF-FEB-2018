@@ -1,6 +1,10 @@
+//confirm I am in this file
 console.log('I am hitting the js file for edit')
 
+//Grab the specific place at which the task I want to edit exists
 let taskdiv = document.getElementById('task-<%= @task.id%>')
+
+//console log that task that I clicked on 
 console.log("Current task clicked " + taskdiv.innerText)
 
 //Gave up here and had to use JQuery to replace the TR element becuase trs dont like forms inside of them 

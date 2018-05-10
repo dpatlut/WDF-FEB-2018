@@ -12,7 +12,7 @@ class TasksController < ApplicationController
 
   # POST /tasks
   def create
-    @task = Task.create(task_params)
+    @new_task = Task.create(task_params)
   end
 
    # GET /tasks/1/edit
@@ -20,6 +20,8 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+
+  #POST /tasks/:id
   def update
     @task = Task.find(params[:id])
     @task.update(task_params)

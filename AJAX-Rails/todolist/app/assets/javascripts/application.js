@@ -14,3 +14,8 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+// document.getElementById('ajaxcall').addEventListener('ajax:success', function(e){
+//    console.log('Call exectued to render code');
+// })
