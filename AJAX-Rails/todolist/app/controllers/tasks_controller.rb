@@ -8,11 +8,13 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
+
   end
 
   # POST /tasks
   def create
-    @new_task = Task.create(task_params)
+    
+    # @new_task = Task.create(task_params)
   end
 
    # GET /tasks/1/edit
