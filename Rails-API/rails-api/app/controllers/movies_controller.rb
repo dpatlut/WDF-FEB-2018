@@ -15,8 +15,12 @@ class MoviesController < ApplicationController
 
 
     def ajax
-        @json_stuff = JSON.parse(HTTParty.get(@base_url+'1').body)
+        # @json_stuff = JSON.parse(HTTParty.get(@base_url+'1').body)
         # puts @json_stuff
+
+        #This is experimental for a dynamic params passed into our method
+        @json_stuff = JSON.parse(HTTParty.get(@base_url+params[:id]).body)
+
     end
 
     private 

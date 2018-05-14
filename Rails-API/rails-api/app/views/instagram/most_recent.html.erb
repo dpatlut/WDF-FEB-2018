@@ -1,0 +1,8 @@
+<h1><%= @client.user.username %>'s recent media</h1>
+
+
+<%= @client.user_recent_media.each do |photo| %>
+    <div style='float:left;'>
+    <img src='<%= photo.images.thumbnail.url %>'> 
+    </div>
+<% end %>
